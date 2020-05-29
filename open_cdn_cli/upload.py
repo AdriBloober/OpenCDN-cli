@@ -12,7 +12,7 @@ def upload(args, parser):
     ):
         token = create_authentication(args, client)
         file = client.file_manager.post(
-            open(args.upload_file, "r"),
+            open(args.upload_file, "rb"),
             args.upload_file,
             token,
         )
